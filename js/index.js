@@ -13,13 +13,13 @@ function bpmClicker() {
     totalBeats += bpm;
     lastClicked = timeNow;
     
-    if(difference(lastBpm, bpm) > 10) {
-        clicks = 0;
-        totalBeats = 0;
+    if(difference(lastBpm, bpm) > 30) {
+        clicks = 1;
+        totalBeats = bpm;
     }
 
     lastBpm = bpm;
-    document.getElementById('bpmContainer').value = Math.round(totalBeats) + " BPM";
+    document.getElementById('bpmContainer').value = Math.round(totalBeats/clicks) + " BPM";
 }
 
 function difference(a, b) { return Math.abs(a - b); }
