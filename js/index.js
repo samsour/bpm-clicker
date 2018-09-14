@@ -20,6 +20,13 @@ function bpmClicker() {
 
     lastBpm = bpm;
     document.getElementById('bpmContainer').value = Math.round(totalBeats/clicks) + " BPM";
+    
+    /*if(bpm > 200) {
+        document.body.className = "crazy";
+    } else {
+        document.body.className = "";
+    }*/
+
 }
 
 function difference(a, b) { return Math.abs(a - b); }

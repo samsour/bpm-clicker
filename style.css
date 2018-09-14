@@ -6,13 +6,18 @@
 }
 
 body {
-    
     width: 100vw;
     height: 100vh;
-
     font-family: "Roboto", sans-serif;
     background: linear-gradient(to bottom right, #193868,#a8033f);
-    
+    background-size: 200%;
+    background-position: 100%;
+    animation: background-animation infinite 5s;
+}
+
+body.crazy {
+    background: linear-gradient(to bottom right, #21f07e 50%,#ca0d52);
+    animation: background-animation infinite .5s;
 }
 
 .content {
@@ -53,4 +58,16 @@ body {
     font-size: 50px;
     font-family: "Roboto", sans-serif;
     text-align: center;
+}
+
+@keyframes background-animation {
+    0% {
+        background-position: 0%
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
 }
